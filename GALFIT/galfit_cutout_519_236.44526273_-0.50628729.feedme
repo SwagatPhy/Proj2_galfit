@@ -1,14 +1,14 @@
 
 ===============================================================================
 # IMAGE and GALFIT CONTROL PARAMETERS
-A)  postage_3_fpC-000745-r2-0525.fits           # Input data image (FITS file)
+A) sigma_519_236.44526273_-0.50628729.fits            # Input data image (FITS file)
 B) imgblock.fits       # Output data image block
-C)  sigma_3_fpC-000745-r2-0525.fits               # Sigma image name (made from data if blank or "none") 
-D)  psf_3_psField-000745-2-0525.fit  #        # Input PSF image and (optional) diffusion kernel
+C) sigma_519_236.44526273_-0.50628729.fits                # Sigma image name (made from data if blank or "none") 
+D) new_psf_0519_1.fits   #        # Input PSF image and (optional) diffusion kernel
 E) 1                   # PSF fine sampling factor relative to data 
 F) none                # Bad pixel mask (FITS image or ASCII coord list)
 G) none                # File with parameter constraints (ASCII file) 
-H) 1    171   1    171   # Image region to fit (xmin xmax ymin ymax)
+H) 1    121   1    121   # Image region to fit (xmin xmax ymin ymax)
 I) 51    51          # Size of the convolution box (x y)
 J) 24.8              # Magnitude photometric zeropoint 
 K) 0.0396  0.0396        # Plate scale (dx dy)    [arcsec per pixel]
@@ -32,21 +32,30 @@ P) 0                   # Choose: 0=optimize, 1=model, 2=imgblock, 3=subcomps
 
 # Object number: 1
  0) sersic                 #  object type
- 1) 91.3196 90.9178  1 1  #  position x, y
- 3) 14.4239     1          #  Integrated magnitude	
- 4) 4.4054      1          #  R_e (half-light radius)   [pix] # also flux radius - half light radius 50%
+ 1) 53.7604  56.2999  1 1  #  position x, y
+ 3) 13.9819     1          #  Integrated magnitude	
+ 4) 6.9009      1          #  R_e (half-light radius)   [pix] # also flux radius - half light radius 50%
  5) 4.2490      1          #  Sersic index n (de Vaucouleurs n=4) 
  6) 0.0000      0          #     ----- 
  7) 0.0000      0          #     ----- 
  8) 0.0000      0          #     ----- 
- 9) 0.4315      1          #  axis ratio (b/a)  #1/elongation from sextractor
-10) 141.092    1          #  position angle (PA) [deg: Up=0, Left=90] # use 1 - position angle from sextractor
+ 9) 0.7048      1          #  axis ratio (b/a)  #1/elongation from sextractor
+10) 47.8218    1          #  position angle (PA) [deg: Up=0, Left=90] # use 1 - position angle from sextractor
  Z) 0                      #  output option (0 = resid., 1 = Don't subtract) 
-		 # output option (0 = resid., 1 = Don’t subtract) 
+
+# Object number: 2
+0) expdisk 			# object type
+1) 53.7604  56.2999 1 1 		# position x, y
+3) 13.9819 1			 # integrated magnitude
+4) 4.1126 1			 # R_s (disk scale-length) [pix]
+9) 0.7048 1 			# axis ratio (b/a)
+10) 47.8218 1			 # position angle (PA) [deg: Up=0, Left=90]
+C0) -0.05 1			 # diskyness(-)/boxyness(+)
+Z) 0				 # output option (0 = resid., 1 = Don’t subtract) 
 
 # Object number: 3
  0) sky                    #  object type
- 1) 155.116      1          #  sky background at center of fitting region [ADUs]
+ 1) 155.2624      1          #  sky background at center of fitting region [ADUs]
  2) 0.0000      0          #  dsky/dx (sky gradient in x)
  3) 0.0000      0          #  dsky/dy (sky gradient in y)
  Z) 0                      #  output option (0 = resid., 1 = Don't subtract) 
